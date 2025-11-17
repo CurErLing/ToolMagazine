@@ -82,16 +82,9 @@ export default function App() {
           </section>
           
           {/* 工具分类展示 */}
-          <section id="tools" className="py-16" aria-labelledby="tools-heading">
+          <section id="tools" className="py-16">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="text-center mb-12">
-                <h2 id="tools-heading" className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-                  精选工具分类
-                </h2>
-                <p className="text-lg text-gray-600 dark:text-gray-300">
-                  我们为您精心挑选了各类实用工具，覆盖工作、学习和生活的方方面面
-                </p>
-              </div>
+              {/* 移除了精选工具分类标题和描述 */}
               
               {Object.entries(toolCategories).map(([key, category]) => (
                 <ErrorBoundary key={key}>
