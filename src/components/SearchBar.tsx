@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Search, ChevronDown } from 'lucide-react';
 import { SearchEngine } from '../data/siteData';
 
@@ -6,77 +6,132 @@ interface SearchBarProps {
   searchTerm: string;
   setSearchTerm: (term: string) => void;
   selectedEngine: SearchEngine;
-  setSelectedEngine: (engine: SearchEngine) => void;
-  showEngineDropdown: boolean;
-  setShowEngineDropdown: (show: boolean) => void;
-  searchEngines: SearchEngine[];
+  onEngineSelect: (engine: SearchEngine) => void;
   onSearch: () => void;
-  onKeyPress: (e: React.KeyboardEvent) => void;
+  searchEngines: SearchEngine[];
 }
 
 const SearchBar: React.FC<SearchBarProps> = ({
   searchTerm,
   setSearchTerm,
   selectedEngine,
-  setSelectedEngine,
-  showEngineDropdown,
-  setShowEngineDropdown,
-  searchEngines,
+  onEngineSelect,
   onSearch,
-  onKeyPress
+  searchEngines
 }) => {
-  const handleEngineSelect = (engine: SearchEngine) => {
-    setSelectedEngine(engine);
-    setShowEngineDropdown(false);
+  const [showEngineDropdown, setShowEngineDropdown] = useState(false);
+  const [isFocused, setIsFocused] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+  
+  const handleKeyPress = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter') {
+      onSearch();
+    }
   };
+
+  // 点击外部关闭下拉菜单
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setShowEngineDropdown(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
+  // 获取搜索引擎图标组件
+  const EngineIcon = selectedEngine.icon;
 
   return (
     <div className="max-w-2xl mx-auto">
-      <div className="relative flex items-center">
-        <div className="relative">
+      <form 
+        className={`relative rounded-lg shadow-lg transition-all duration-300 ${isFocused ? 'shadow-xl' : ''}`}
+        onSubmit={(e) => {
+          e.preventDefault();
+          onSearch();
+        }}
+        role="search"
+        aria-label="网站搜索"
+      >
+        {/* 搜索引擎选择器 */}
+        <div className="absolute left-0 top-0 bottom-0 flex items-center" ref={dropdownRef}>
           <button
+            type="button"
             onClick={() => setShowEngineDropdown(!showEngineDropdown)}
-            className="flex items-center justify-between w-24 px-3 py-3 bg-white dark:bg-gray-800 rounded-l-lg border-r border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700"
-            aria-haspopup="true"
+            className="flex items-center h-full px-4 bg-gray-50 dark:bg-gray-700 border-r border-gray-300 dark:border-gray-600 rounded-l-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors duration-200"
+            aria-label="选择搜索引擎"
             aria-expanded={showEngineDropdown}
+            aria-haspopup="listbox"
           >
-            <span>{selectedEngine.name}</span>
-            <ChevronDown className="h-4 w-4 ml-1" />
+            <EngineIcon className="h-5 w-5 text-gray-700 dark:text-gray-300" aria-hidden="true" />
+            <ChevronDown 
+              className={`ml-2 h-4 w-4 text-gray-500 transition-transform duration-200 ${showEngineDropdown ? 'rotate-180' : ''}`} 
+              aria-hidden="true"
+            />
           </button>
-            {showEngineDropdown && (
-            <div className="absolute top-full left-0 mt-1 w-24 bg-white dark:bg-gray-800 rounded-lg shadow-lg z-50">
-              {searchEngines.map((engine) => (
-                <button
-                  key={engine.name}
-                  onClick={() => handleEngineSelect(engine)}
-                  className="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300"
-                >
-                  {engine.name}
-                </button>
-                ))}
+          
+          {/* 搜索引擎下拉菜单 */}
+          {showEngineDropdown && (
+            <div 
+              className="absolute top-full left-0 mt-1 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 z-10 overflow-hidden"
+              role="listbox"
+              aria-label="搜索引擎列表"
+            >
+              {searchEngines.map((engine) => {
+                const Icon = engine.icon;
+                return (
+                  <button
+                    key={engine.id}
+                    type="button"
+                    onClick={() => {
+                      onEngineSelect(engine);
+                      setShowEngineDropdown(false);
+                    }}
+                    className={`flex items-center w-full px-4 py-3 text-left hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200 ${
+                      selectedEngine.id === engine.id ? 'bg-blue-50 dark:bg-blue-900/20' : ''
+                    }`}
+                    role="option"
+                    aria-selected={selectedEngine.id === engine.id}
+                  >
+                    <Icon className="h-5 w-5 text-gray-700 dark:text-gray-300 mr-3" aria-hidden="true" />
+                    <span className="text-gray-900 dark:text-white">{engine.name}</span>
+                    {selectedEngine.id === engine.id && (
+                      <span className="ml-auto text-blue-600 dark:text-blue-400 text-sm">当前</span>
+                    )}
+                  </button>
+                );
+              })}
             </div>
           )}
         </div>
-        <div className="flex-1 relative">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" aria-hidden="true" />
-          <input
-            type="text"
-            placeholder="搜索..."
-            className="w-full pl-10 pr-4 py-3 rounded-r-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-800 dark:text-white dark:placeholder-gray-400"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            onKeyPress={onKeyPress}
-            aria-label="搜索关键词"
-          />
-          <button
-            onClick={onSearch}
-            className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-blue-600 text-white px-4 py-1.5 rounded-lg hover:bg-blue-700 transition-colors duration-200"
-            aria-label="搜索"
-          >
-            搜索
-          </button>
-        </div>
-      </div>
+        
+        {/* 搜索输入框 */}
+        <input
+          type="text"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          onKeyPress={handleKeyPress}
+          onFocus={() => setIsFocused(true)}
+          onBlur={() => setIsFocused(false)}
+          placeholder={`在 ${selectedEngine.name} 上搜索...`}
+          className="w-full pl-24 pr-12 py-4 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 rounded-lg border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+          aria-label="搜索关键词"
+          autoComplete="off"
+        />
+        
+        {/* 搜索按钮 */}
+        <button
+          type="submit"
+          className="absolute right-0 top-0 bottom-0 flex items-center px-4 bg-blue-600 hover:bg-blue-700 text-white rounded-r-lg transition-all duration-200 hover:shadow-md transform hover:scale-105"
+          aria-label="执行搜索"
+        >
+          <Search className="h-5 w-5" aria-hidden="true" />
+        </button>
+      </form>
     </div>
   );
 };

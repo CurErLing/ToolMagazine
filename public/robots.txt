@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://lingtongxue-tools.example.com/sitemap.xml
+
+# Block common non-content directories
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/

@@ -177,39 +177,40 @@ export const initialToolCategories: Record<string, ToolCategoryWithSub> = {
           { name: '六月听书', desc: '在线听书平台', icon: Book, url: 'https://www.6yueting.com/', count: 0 },
         ],
       },
-      // 注意：这里有个拼写错误 "vides"，正确应该是 "videos"
+      // 视频动漫分类
       videos: {
         title: '视频动漫',
         tools: [
       //视频资源    
-      { name: '影视资源搜索', desc: '视频资源', icon: FileVideo, url: 'https://svip.bljiex.cc/', count: 0 },
-      { name: '茶杯狐影视', desc: '视频资源', icon: FileVideo, url: 'https://cupfox.app/', count: 0 },
-      { name: 'MYD影视', desc: '视频资源', icon: FileVideo, url: 'https://myd04.com/', count: 0 },
-      { name: '追影猫', desc: '视频资源', icon: FileVideo, url: 'https://zhuiyingmao5.com/', count: 0 },
-      { name: 'DDDOG影视', desc: '视频资源', icon: FileVideo, url: 'https://www.dddog.cn/movie/', count: 0 },
-      { name: '影合影视', desc: '视频资源', icon: FileVideo, url: 'https://yinghe.app/', count: 0 },
-      { name: '追剧猫', desc: '影视搜索', icon: FileVideo, url: 'https://www.czzy77.com/', count: 0 },
-      { name: '硬核资源', desc: '影视搜索', icon: FileVideo, url: 'https://yinghezhinan.com/', count: 0 },
-      { name: '4K HDR', desc: '4K高清视频', icon: FileVideo, url: 'https://4khdr.cn', count: 0 },     
-      { name: '爱看机器人', desc: '全网影视聚合', icon: FileVideo, url: 'https://v.ikanbot.com', count: 0 },
+          { name: '影视资源搜索', desc: '视频资源', icon: FileVideo, url: 'https://svip.bljiex.cc/', count: 0 },
+          { name: '茶杯狐影视', desc: '视频资源', icon: FileVideo, url: 'https://cupfox.app/', count: 0 },
+          { name: 'MYD影视', desc: '视频资源', icon: FileVideo, url: 'https://myd04.com/', count: 0 },
+          { name: '追影猫', desc: '视频资源', icon: FileVideo, url: 'https://zhuiyingmao5.com/', count: 0 },
+          { name: 'DDDOG影视', desc: '视频资源', icon: FileVideo, url: 'https://www.dddog.cn/movie/', count: 0 },
+          { name: '影合影视', desc: '视频资源', icon: FileVideo, url: 'https://yinghe.app/', count: 0 },
+          { name: '追剧猫', desc: '影视搜索', icon: FileVideo, url: 'https://www.czzy77.com/', count: 0 },
+          { name: '硬核资源', desc: '影视搜索', icon: FileVideo, url: 'https://yinghezhinan.com/', count: 0 },
+          { name: '4K HDR', desc: '4K高清视频', icon: FileVideo, url: 'https://4khdr.cn', count: 0 },     
+          { name: '爱看机器人', desc: '全网影视聚合', icon: FileVideo, url: 'https://v.ikanbot.com', count: 0 },
 
 
       //动漫资源          
-     { name: 'AGE动漫', desc: '动漫网站合集', icon: FileVideo, url: 'https://www.agedm.org/', count: 0 },
-      { name: '米汤TV', desc: '动漫在线播放', icon: FileVideo, url: 'https://www.mitang.tv/', count: 0 },
-      { name: 'Anime1', desc: '动漫在线播放', icon: FileVideo, url: 'https://anime1.me/', count: 0 },
-      { name: 'BimiACG', desc: '动漫在线播放', icon: FileVideo, url: 'https://www.bimiacg4.net/', count: 0 },
-      { name: '樱花动漫', desc: '动漫在线播放', icon: FileVideo, url: 'https://www.yhmgo.com/', count: 0 },
-      { name: 'NYA Fun', desc: '动漫在线播放', icon: FileVideo, url: 'https://www.nyafun.net/', count: 0 },
-      { name: '铃兰动漫', desc: '动漫在线播放', icon: FileVideo, url: 'https://www.lldm.net/', count: 0 },
-          //漫画资源
-      { name: 'G站漫画', desc: '漫画资源', icon: Book, url: 'https://godamh.com/', count: 0 },
-      { name: 'mangacopy', desc: '漫画阅读网站', icon: Book, url: 'https://www.mangacopy.com', count: 0 },
-      { name: 'colamanga', desc: '漫画在线阅读', icon: Book, url: 'https://www.colamanga.com', count: 0 },
-      { name: 'gufengmh', desc: '古风漫画网', icon: Book, url: 'https://www.gufengmh.com', count: 0 },
-      { name: 'baozimh', desc: '国漫资源网站', icon: Book, url: 'https://cn.baozimh.com', count: 0 },
-      { name: 'comic.idmzj', desc: '动漫之家漫画', icon: Book, url: 'https://comic.idmzj.com', count: 0 },
+          { name: 'AGE动漫', desc: '动漫网站合集', icon: FileVideo, url: 'https://www.agedm.org/', count: 0 },
+          { name: 'gesamTV', desc: '动漫在线播放', icon: FileVideo, url: 'https://www.mitang.tv/', count: 0 },
+          { name: 'Anime1', desc: '动漫在线播放', icon: FileVideo, url: 'https://anime1.me/', count: 0 },
+          { name: 'BimiACG', desc: '动漫在线播放', icon: FileVideo, url: 'https://www.bimiacg4.net/', count: 0 },
+          { name: '樱花动漫', desc: '动漫在线播放', icon: FileVideo, url: 'https://www.yhmgo.com/', count: 0 },
+          { name: 'NYA Fun', desc: '动漫在线播放', icon: FileVideo, url: 'https://www.nyafun.net/', count: 0 },
+          { name: '铃兰动漫', desc: '动漫在线播放', icon: FileVideo, url: 'https://www.lldm.net/', count: 0 },
+              //漫画资源
           
+          { name: 'G站漫画', desc: '漫画资源', icon: Book, url: 'https://godamh.com/', count: 0 },
+          { name: 'mangacopy', desc: '漫画阅读网站', icon: Book, url: 'https://www.mangacopy.com', count: 0 },
+          { name: 'colamanga', desc: '漫画在线阅读', icon: Book, url: 'https://www.colamanga.com', count: 0 },
+          { name: 'gufengmh', desc: '古风漫画网', icon: Book, url: 'https://www.gufengmh.com', count: 0 },
+          { name: 'baozimh', desc: '国漫资源网站', icon: Book, url: 'https://cn.baozimh.com', count: 0 },
+          { name: 'comic.idmzj', desc: '动漫之家漫画', icon: Book, url: 'https://comic.idmzj.com', count: 0 },
+              
     ],
 
       },
@@ -278,7 +279,7 @@ export const initialToolCategories: Record<string, ToolCategoryWithSub> = {
           { name: '永久免费考试系统', desc: '永久免费考试系统', icon: Globe, url: 'https://www.examcoo.com/', count: 0 },
  ],
       },
-      othor:{
+      other:{
         title: '其他资源',
         tools: [
    
@@ -286,24 +287,24 @@ export const initialToolCategories: Record<string, ToolCategoryWithSub> = {
 
 
       //ppt
-      { name: 'PPT超级市场', desc: 'AI PPT模板网站', icon: FileText, url: 'https://ppt.sotary.com', count: 0 },
-      { name: 'PPT设计教程网', desc: 'PPT 教程与模板', icon: FileText, url: 'https://www.pptfans.cn/pptcourse', count: 0 },
-      { name: '优品PPT', desc: 'PPT模板', icon: FileText, url: 'https://www.ypppt.com', count: 0 },
-      { name: '第一PPT', desc: 'PPT资源', icon: FileText, url: 'https://www.1ppt.com', count: 0 },
-      { name: 'AIPPT', desc: 'AI智能PPT生成工具', icon: FileText, url: 'https://www.aippt.cn/', count: 0 },
-      { name: 'PPT模板宝', desc: 'PPT模板资源', icon: FileText, url: 'https://www.51pptmoban.com/', count: 0 },
-      { name: 'PPT汇', desc: 'PPT模板资源', icon: FileText, url: 'https://www.ppthui.com/', count: 0 },
+        { name: 'PPT超级市场', desc: 'AI PPT模板网站', icon: FileText, url: 'https://ppt.sotary.com', count: 0 },
+        { name: 'PPT设计教程网', desc: 'PPT 教程与模板', icon: FileText, url: 'https://www.pptfans.cn/pptcourse', count: 0 },
+        { name: '优品PPT', desc: 'PPT模板', icon: FileText, url: 'https://www.ypppt.com', count: 0 },
+        { name: '第一PPT', desc: 'PPT资源', icon: FileText, url: 'https://www.1ppt.com', count: 0 },
+        { name: 'AIPPT', desc: 'AI智能PPT生成工具', icon: FileText, url: 'https://www.aippt.cn/', count: 0 },
+        { name: 'PPT模板宝', desc: 'PPT模板资源', icon: FileText, url: 'https://www.51pptmoban.com/', count: 0 },
+        { name: 'PPT汇', desc: 'PPT模板资源', icon: FileText, url: 'https://www.ppthui.com/', count: 0 },
 
-  { name: '盘库吧', desc: '网盘资源全网在线搜索神器', icon: Database, url: 'https://panku8.com/', count: 0 },
+        { name: '盘库吧', desc: '网盘资源全网在线搜索神器', icon: Database, url: 'https://panku8.com/', count: 0 },
 
-      { name: '免费查重', desc: '论文查重工具', icon: FileText, url: 'https://www.paperfree.cn', count: 0 },
-      { name: '小纸条', desc: '开放资源网站', icon: FileText, url: 'https://gitcafe.ink', count: 0 },
+        { name: '免费查重', desc: '论文查重工具', icon: FileText, url: 'https://www.paperfree.cn', count: 0 },
+        { name: '小纸条', desc: '开放资源网站', icon: FileText, url: 'https://gitcafe.ink', count: 0 },
 
-      { name: 'mvcat', desc: '个性化电影推荐', icon: FileVideo, url: 'https://www.mvcat.com', count: 0 },
-      { name: '千帆搜索', desc: '聚合网盘搜索', icon: FileText, url: 'https://pan.qianfan.app/', count: 0 },
-      { name: 'AnyBT', desc: '磁力搜索', icon: Download, url: 'https://anybt.eth.limo/', count: 0 },
-      { name: "What's the link?", desc: '磁力链接内容预览', icon: Download, url: 'https://whatslink.info', count: 0 },
-      { name: 'Justlive', desc: '多平台直播聚合', icon: FileVideo, url: 'https://live.yj1211.work', count: 0 },
+        { name: 'mvcat', desc: '个性化电影推荐', icon: FileVideo, url: 'https://www.mvcat.com', count: 0 },
+        { name: '千帆搜索', desc: '聚合网盘搜索', icon: FileText, url: 'https://pan.qianfan.app/', count: 0 },
+        { name: 'AnyBT', desc: '磁力搜索', icon: Download, url: 'https://anybt.eth.limo/', count: 0 },
+        { name: "What's the link?", desc: '磁力链接内容预览', icon: Download, url: 'https://whatslink.info', count: 0 },
+        { name: 'Justlive', desc: '多平台直播聚合', icon: FileVideo, url: 'https://live.yj1211.work', count: 0 },
     ],          
       }
     },
@@ -315,60 +316,60 @@ export const initialToolCategories: Record<string, ToolCategoryWithSub> = {
             title: '探索观测',
             tools:[
                 //探索观测
-      { name: '实时地球', desc: '全球卫星地图观测', icon: Building2, url: 'https://zoom.earth/', count: 0 },
-      { name: '深海探索', desc: '交互式深海探索', icon: Globe, url: 'https://neal.fun/deep-sea', count: 0 },
-      { name: '海底世界', desc: '海洋生态互动教育', icon: Building2, url: 'https://www.bluemarinefoundation.com/the-sea-we-breathe/', count: 0 },
-      { name: '随机街景', desc: '随机探索街景', icon: Building2, url: 'https://randomstreetview.com/', count: 0 },
-      { name: '天际摄像头', desc: '全球实景直播', icon: Building2, url: 'https://www.skylinewebcams.com/', count: 0 },
-      { name: '鲨鱼追踪器', desc: '鲨鱼迁徙观测', icon: Building2, url: 'https://www.ocearch.org/tracker/', count: 0 },
-      { name: '3D地球模型', desc: '3D交互地球模型', icon: Building2, url: 'https://3d-app.yunser.com/earth/', count: 0 },
-      { name: '远古地球', desc: '板块运动可视化', icon: Building2, url: 'https://3d-app.yunser.com/plateMotion/', count: 0 },
-      { name: '光污染地图', desc: '全球光污染地图', icon: Building2, url: 'https://www.lightpollutionmap.info/', count: 0 },
-      { name: '地球时钟', desc: '地球卫星时钟', icon: Building2, url: 'https://earthclock.cwandt.com/', count: 0 },
-      { name: 'Ventusky', desc: '气象数据可视化', icon: Building2, url: 'https://www.ventusky.com/', count: 0 },
-              
-      { name: '流星雨观测', desc: '流星雨可视化', icon: Building2, url: 'https://www.meteorshowers.org/', count: 0 },
-      { name: '航班追踪', desc: '航班实时追踪', icon: Building2, url: 'https://zh.flightaware.com/', count: 0 },
-      { name: '全球网络攻击图', desc: '实时网络攻击图', icon: Shield, url: 'https://cybermap.kaspersky.com', count: 0 },
+              { name: '实时地球', desc: '全球卫星地图观测', icon: Building2, url: 'https://zoom.earth/', count: 0 },
+              { name: '深海探索', desc: '交互式深海探索', icon: Globe, url: 'https://neal.fun/deep-sea', count: 0 },
+              { name: '海底世界', desc: '海洋生态互动教育', icon: Building2, url: 'https://www.bluemarinefoundation.com/the-sea-we-breathe/', count: 0 },
+              { name: '随机街景', desc: '随机探索街景', icon: Building2, url: 'https://randomstreetview.com/', count: 0 },
+              { name: '天际摄像头', desc: '全球实景直播', icon: Building2, url: 'https://www.skylinewebcams.com/', count: 0 },
+              { name: '鲨鱼追踪器', desc: '鲨鱼迁徙观测', icon: Building2, url: 'https://www.ocearch.org/tracker/', count: 0 },
+              { name: '3D地球模型', desc: '3D交互地球模型', icon: Building2, url: 'https://3d-app.yunser.com/earth/', count: 0 },
+              { name: '远古地球', desc: '板块运动可视化', icon: Building2, url: 'https://3d-app.yunser.com/plateMotion/', count: 0 },
+              { name: '光污染地图', desc: '全球光污染地图', icon: Building2, url: 'https://www.lightpollutionmap.info/', count: 0 },
+              { name: '地球时钟', desc: '地球卫星时钟', icon: Building2, url: 'https://earthclock.cwandt.com/', count: 0 },
+              { name: 'Ventusky', desc: '气象数据可视化', icon: Building2, url: 'https://www.ventusky.com/', count: 0 },
+                      
+              { name: '流星雨观测', desc: '流星雨可视化', icon: Building2, url: 'https://www.meteorshowers.org/', count: 0 },
+              { name: '航班追踪', desc: '航班实时追踪', icon: Building2, url: 'https://zh.flightaware.com/', count: 0 },
+              { name: '全球网络攻击图', desc: '实时网络攻击图', icon: Shield, url: 'https://cybermap.kaspersky.com', count: 0 },
 
-            ]
-          },
-          art:{
-            title: '文化艺术',
-            tools:[ //文化艺术
-      { name: 'CyArk', desc: '古迹3D数字化平台', icon: Building2, url: 'https://www.cyark.org/', count: 0 },
-      { name: '故宫全景', desc: '故宫全景虚拟游览', icon: Building2, url: 'https://pano.dpm.org.cn/', count: 0 },
-      { name: '故宫数字文物', desc: '故宫藏品高清浏览', icon: Building2, url: 'https://digicol.dpm.org.cn/', count: 0 },
-      { name: '中华珍宝馆', desc: '书画数字资源馆', icon: Building2, url: 'https://g2.ltfc.net/', count: 0 },
-      { name: '陕西博物馆', desc: '陕西博物馆线上展厅', icon: Building2, url: 'https://www.sxhm.com/online.html', count: 0 },
-      { name: '上海博物馆AR', desc: '上博增强现实体验', icon: Building2, url: 'https://www.shanghaimuseum.net/mu/frontend/pg/index', count: 0 },
-      { name: '国博VR', desc: '国博虚拟现实游览', icon: Building2, url: 'http://www.chnmuseum.cn/Portals/0/web/vr/', count: 0 },
-      { name: '千亿像素中国', desc: '城市超清全景图', icon: Building2, url: 'http://bigpixel.cn/', count: 0 },
-      { name: '历史照片库', desc: '近代中国影像库', icon: Building2, url: 'https://www.hpcbristol.net/', count: 0 },
-     { name: '荷兰国家博物馆', desc: '荷兰国立艺术馆', icon: Building2, url: 'https://www.rijksmuseum.nl/nl', count: 0 },
-      { name: 'AirPano', desc: '全球全景旅游', icon: Globe, url: 'https://www.airpano.org.cn', count: 0 },
-      { name: '卢浮宫藏品库', desc: '卢浮宫数字典藏', icon: Building2, url: 'https://collections.louvre.fr/', count: 0 },
-       { name: '波斯波利斯', desc: '波斯古城复原', icon: Building2, url: 'https://persepolis.getty.edu/', count: 0 },
+                ]
+              },
+              art:{
+                title: '文化艺术',
+                tools:[ //文化艺术
+                { name: 'CyArk', desc: '古迹3D数字化平台', icon: Building2, url: 'https://www.cyark.org/', count: 0 },
+                { name: '故宫全景', desc: '故宫全景虚拟游览', icon: Building2, url: 'https://pano.dpm.org.cn/', count: 0 },
+                { name: '故宫数字文物', desc: '故宫藏品高清浏览', icon: Building2, url: 'https://digicol.dpm.org.cn/', count: 0 },
+                { name: '中华珍宝馆', desc: '书画数字资源馆', icon: Building2, url: 'https://g2.ltfc.net/', count: 0 },
+                { name: '陕西博物馆', desc: '陕西博物馆线上展厅', icon: Building2, url: 'https://www.sxhm.com/online.html', count: 0 },
+                { name: '上海博物馆AR', desc: '上博增强现实体验', icon: Building2, url: 'https://www.shanghaimuseum.net/mu/frontend/pg/index', count: 0 },
+                { name: '国博VR', desc: '国博虚拟现实游览', icon: Building2, url: 'http://www.chnmuseum.cn/Portals/0/web/vr/', count: 0 },
+                { name: '千亿像素中国', desc: '城市超清全景图', icon: Building2, url: 'http://bigpixel.cn/', count: 0 },
+                { name: '历史照片库', desc: '近代中国影像库', icon: Building2, url: 'https://www.hpcbristol.net/', count: 0 },
+                { name: '荷兰国家博物馆', desc: '荷兰国立艺术馆', icon: Building2, url: 'https://www.rijksmuseum.nl/nl', count: 0 },
+                { name: 'AirPano', desc: '全球全景旅游', icon: Globe, url: 'https://www.airpano.org.cn', count: 0 },
+                { name: '卢浮宫藏品库', desc: '卢浮宫数字典藏', icon: Building2, url: 'https://collections.louvre.fr/', count: 0 },
+                { name: '波斯波利斯', desc: '波斯古城复原', icon: Building2, url: 'https://persepolis.getty.edu/', count: 0 },
 
-      { name: '苏联海报库', desc: '苏联海报收藏', icon: Building2, url: 'https://reddirect.ru/', count: 0 },
-   { name: '艺术公域', desc: '高清艺术公域图', icon: Building2, url: 
-      'https://artvee.com/', count: 0 },        
-        { name: '中国物种名录', desc: '权威生物名录', icon: Building2, url: 'http://sp2000.org.cn/', count: 0 },
+                { name: '苏联海报库', desc: '苏联海报收藏', icon: Building2, url: 'https://reddirect.ru/', count: 0 },
+                { name: '艺术公域', desc: '高清艺术公域图', icon: Building2, url: 
+                'https://artvee.com/', count: 0 },        
+                  { name: '中国物种名录', desc: '权威生物名录', icon: Building2, url: 'http://sp2000.org.cn/', count: 0 },
 
-      
- { name: '全历史', desc: '可视化历史百科', icon: Database, url: 'https://www.allhistory.com', count: 0 },
-      { name: '书格', desc: '古籍善本数字馆', icon: Book, url: 'https://new.shuge.org', count: 0 },
-      { name: '知妖', desc: '中国妖怪文化志', icon: Database, url: 'http://www.cbaigui.com', count: 0 },
-      { name: '乡音苑', desc: '中文方言采录', icon: Database, url: 'https://phonemica.net', count: 0 },
-      { name: '故事谷', desc: '植根于人民的故事网站', icon: Book, url: 'https://www.gushigu.cn/', count: 0 },
-      { name: '历史故事网·烟雨阁', desc: '民间故事与野史', icon: Book, url: 'https://www.yanyuzhai.cn/', count: 0 },
+                
+                { name: '全历史', desc: '可视化历史百科', icon: Database, url: 'https://www.allhistory.com', count: 0 },
+                { name: '书格', desc: '古籍善本数字馆', icon: Book, url: 'https://new.shuge.org', count: 0 },
+                { name: '知妖', desc: '中国妖怪文化志', icon: Database, url: 'http://www.cbaigui.com', count: 0 },
+                { name: '乡音苑', desc: '中文方言采录', icon: Database, url: 'https://phonemica.net', count: 0 },
+                { name: '故事谷', desc: '植根于人民的故事网站', icon: Book, url: 'https://www.gushigu.cn/', count: 0 },
+                { name: '历史故事网·烟雨阁', desc: '民间故事与野史', icon: Book, url: 'https://www.yanyuzhai.cn/', count: 0 },
 
-      
-      { name: 'How Music Taste Evolved', desc: '音乐历史可视化', icon: Music, url: 'https://pudding.cool/2017/03/music-history', count: 0 },
+          
+                { name: 'How Music Taste Evolved', desc: '音乐历史可视化', icon: Music, url: 'https://pudding.cool/2017/03/music-history', count: 0 },
 
-  { name: '百家讲坛', desc: '传统文化普及栏目', icon: Building2, url: 'https://tv.cctv.com/lm/bjjt/', count: 0 },
-      { name: '历史上的今天', desc: '了解历史上的今日', icon: Building2, url: 'https://baike.baidu.com/calendar/', count: 0 },
-                    { name: '观沧海', desc: '历史地图研究', icon: Building2, url: 'https://www.ageeye.cn/', count: 0 },
+                { name: '百家讲坛', desc: '传统文化普及栏目', icon: Building2, url: 'https://tv.cctv.com/lm/bjjt/', count: 0 },
+                { name: '历史上的今天', desc: '了解历史上的今日', icon: Building2, url: 'https://baike.baidu.com/calendar/', count: 0 },
+                { name: '观沧海', desc: '历史地图研究', icon: Building2, url: 'https://www.ageeye.cn/', count: 0 },
 
 
     ]
@@ -379,21 +380,21 @@ export const initialToolCategories: Record<string, ToolCategoryWithSub> = {
       //娱乐互动
       { name: '红警网页版', desc: '红警在线游玩', icon: Gamepad2, url: 'https://game.chronodivide.com', count: 0 },
       { name: '植物大战僵尸', desc: '网页版植物大战僵尸', icon: Gamepad2, url: 'https://pvz.heheda.top', count: 0 },
-      { name: '小霸王', desc: '在线怀旧街机', icon: Gamepad2, url: 'https://www.yikm.net', count: 0 },
-      { name: '美少女生成器', desc: '随机动漫少女', icon: Image, url: 'https://thiswaifudoesnotexist.net', count: 0 },
-      { name: '动漫捏脸', desc: '动漫角色捏脸', icon: Image, url: 'https://picrew.me/ja', count: 0 },
-      { name: '查无此人', desc: '随机生成人脸', icon: Image, url: 'https://thispersondoesnotexist.com', count: 0 },
-      { name: '虚拟乐器', desc: '网页乐器演奏', icon: Music, url: 'https://www.virtualmusicalinstruments.com', count: 0 },
-      { name: '在线钢琴', desc: '键盘弹琴模拟', icon: Music, url: 'https://www.xiwnn.com/piano', count: 0 },
-      { name: 'tetr.io', desc: '在线俄罗斯方块', icon: Gamepad2, url: 'https://tetr.io', count: 0 },
-      { name: '信任的进化', desc: '心理博弈小游戏', icon: Gamepad2, url: 'https://dccxi.com', count: 0 },
-      { name: '人生重开模拟器', desc: '文字人生游戏', icon: Gamepad2, url: 'https://syaro.io', count: 0 },
-      { name: 'slapkirk', desc: '打脸小游戏', icon: Gamepad2, url: 'https://www.slapkirk.com/play', count: 0 },
-      
-      { name: 'AI 随机图像', desc: 'AI 随机生成图片', icon: Image, url: 'https://airandomimage.art/', count: 0 },
-      { name: '营销号生成器', desc: '营销文案生成', icon: FileText, url: 'https://kaseidis.gitee.io/interesting_gadgets/marketing_generator', count: 0 },
-      { name: '打字打字', desc: '在线打字练习', icon: Keyboard, url: 'https://www.dazidazi.com', count: 0 },
-      { name: '反应测试', desc: '反应速度测试', icon: Gamepad2, url: 'https://humanbenchmark.com/tests/reactiontime', count: 0 },
+              { name: '小霸王', desc: '在线怀旧街机', icon: Gamepad2, url: 'https://www.yikm.net', count: 0 },
+              { name: '美少女生成器', desc: '随机动漫少女', icon: Image, url: 'https://thiswaifudoesnotexist.net', count: 0 },
+              { name: '动漫捏脸', desc: '动漫角色捏脸', icon: Image, url: 'https://picrew.me/ja', count: 0 },
+              { name: '查无此人', desc: '随机生成人脸', icon: Image, url: 'https://thispersondoesnotexist.com', count: 0 },
+              { name: '虚拟乐器', desc: '网页乐器演奏', icon: Music, url: 'https://www.virtualmusicalinstruments.com', count: 0 },
+              { name: '在线钢琴', desc: '键盘弹琴模拟', icon: Music, url: 'https://www.xiwnn.com/piano', count: 0 },
+              { name: 'tetr.io', desc: '在线俄罗斯方块', icon: Gamepad2, url: 'https://tetr.io', count: 0 },
+              { name: '信任的进化', desc: '心理博弈小游戏', icon: Gamepad2, url: 'https://dccxi.com', count: 0 },
+              { name: '人生重开模拟器', desc: '文字人生游戏', icon: Gamepad2, url: 'https://syaro.io', count: 0 },
+              { name: 'slapkirk', desc: '打脸小游戏', icon: Gamepad2, url: 'https://www.slapkirk.com/play', count: 0 },
+              
+              { name: 'AI 随机图像', desc: 'AI 随机生成图片', icon: Image, url: 'https://airandomimage.art/', count: 0 },
+              { name: '营销号生成器', desc: '营销文案生成', icon: FileText, url: 'https://kaseidis.gitee.io/interesting_gadgets/marketing_generator', count: 0 },
+              { name: '打字打字', desc: '在线打字练习', icon: Keyboard, url: 'https://www.dazidazi.com', count: 0 },
+              { name: '反应测试', desc: '反应速度测试', icon: Gamepad2, url: 'https://humanbenchmark.com/tests/reactiontime', count: 0 },
 
 
 
@@ -420,7 +421,7 @@ export const initialToolCategories: Record<string, ToolCategoryWithSub> = {
       { name: '核弹模拟器', desc: '核爆影响模拟器', icon: Building2, url: 'https://nuclearsecrecy.com/nukemap/', count: 0 },
       { name: '地球时间线', desc: '地球历史时间轴', icon: Building2, url: 'https://timelineofearth.com/', count: 0 },
       { name: '克苏鲁公社', desc: '克苏鲁文化社区', icon: Building2, url: 'https://www.cthulhuclub.com/', count: 0 },
-{ name: '极像素', desc: '超高清全景图库', icon: Building2, url: 'https://www.sigoo.com/', count: 0 },
+      { name: '极像素', desc: '超高清全景图库', icon: Building2, url: 'https://www.sigoo.com/', count: 0 },
       { name: 'OEC数据', desc: '国际贸易数据', icon: Building2, url: 'https://oec.world/', count: 0 },    
       { name: '木材数据库', desc: '木材材料特性库', icon: Building2, url: 'https://www.wood-database.com/', count: 0 },
       { name: '无限美术馆', desc: '在线3D艺术展', icon: Building2, url: 'https://gallery.nowaythis.works/', count: 0 },
@@ -438,7 +439,7 @@ export const initialToolCategories: Record<string, ToolCategoryWithSub> = {
       { name: '答案之书在线版', desc: '在线答案占卜', icon: Book, url: 'https://www.myanswersbook.com', count: 0 },
       { name: '假装升级', desc: '假装系统更新', icon: Server, url: 'https://fakeupdate.net', count: 0 },
  
-  { name: '全球直播摄像头', desc: '全球直播摄像集合', icon: Building2, url: 'https://www.webcamtaxi.com/', count: 0 },
+      { name: '全球直播摄像头', desc: '全球直播摄像集合', icon: Building2, url: 'https://www.webcamtaxi.com/', count: 0 },
      
    
       { name: '模拟器博物馆', desc: '经典系统模拟器', icon: Building2, url: 'http://www.famicn.com/', count: 0 },
@@ -474,11 +475,41 @@ export const initialToolCategories: Record<string, ToolCategoryWithSub> = {
   }
 };
 
-// 修复拼写错误
-if (initialToolCategories.resources.subcategories && 'vides' in initialToolCategories.resources.subcategories) {
-  initialToolCategories.resources.subcategories.videos = initialToolCategories.resources.subcategories.vides;
-  delete initialToolCategories.resources.subcategories.vides;
-}
+// 数据结构完整性检查
+export const validateToolData = (): boolean => {
+  try {
+    // 验证所有分类都有有效的子分类或工具
+    Object.entries(initialToolCategories).forEach(([key, category]) => {
+      if (!category.title) {
+        console.warn(`分类 ${key} 缺少标题`);
+        return false;
+      }
+      
+      if (category.subcategories) {
+        Object.entries(category.subcategories).forEach(([subKey, subCategory]) => {
+          if (!subCategory.title) {
+            console.warn(`子分类 ${key}.${subKey} 缺少标题`);
+            return false;
+          }
+          if (!Array.isArray(subCategory.tools) || subCategory.tools.length === 0) {
+            console.warn(`子分类 ${key}.${subKey} 没有工具或工具不是数组`);
+            return false;
+          }
+        });
+      }
+      
+      if (category.tools && !Array.isArray(category.tools)) {
+        console.warn(`分类 ${key} 的 tools 属性不是数组`);
+        return false;
+      }
+    });
+    
+    return true;
+  } catch (error) {
+    console.error('工具数据验证失败:', error);
+    return false;
+  }
+};
 
 // 由于原始代码中resources部分被省略了很多，这里为了保持简洁，我们只保留了部分数据
 

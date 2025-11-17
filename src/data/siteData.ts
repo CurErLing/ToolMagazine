@@ -1,13 +1,17 @@
+import { LucideIcon } from 'lucide-react';
+
 export interface Testimonial {
   name: string;
-  role: string;
+  title: string;  // 修改为title，与Testimonials组件中的使用一致
   content: string;
-  avatar: string;
+  rating: number; // 添加rating属性
 }
 
 export interface SearchEngine {
+  id: string;
   name: string;
   url: string;
+  icon: LucideIcon;
 }
 
 export interface FAQ {
@@ -18,30 +22,38 @@ export interface FAQ {
 export const testimonials: Testimonial[] = [
   {
     name: '张工',
-    role: '全栈开发者',
+    title: '全栈开发者',  // 修改为title
     content: '这个工具导航让我的工作效率提升了不少，强烈推荐！',
-    avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop',
+    rating: 5,  // 添加rating
   },
   {
     name: '李设计',
-    role: 'UI设计师',
+    title: 'UI设计师',  // 修改为title
     content: '分类清晰，界面美观，找工具变得特别方便。',
-    avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop',
+    rating: 5,  // 添加rating
   },
 ];
 
+import { Search, Globe, Chrome } from 'lucide-react';
+
 export const searchEngines: SearchEngine[] = [
   {
+    id: 'baidu',
     name: '百度',
     url: 'https://www.baidu.com/s?wd=',
+    icon: Search
   },
   {
+    id: 'bing',
     name: '必应',
     url: 'https://www.bing.com/search?q=',
+    icon: Globe
   },
   {
+    id: 'google',
     name: '谷歌',
     url: 'https://www.google.com/search?q=',
+    icon: Chrome
   },
 ];
 
