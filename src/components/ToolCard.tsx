@@ -302,6 +302,9 @@ const ToolCard: React.FC<ToolCardProps> = ({ tool, onClick }) => {
             <p className="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-2">
               {tool.desc}
             </p>
+            <div className="mt-2 text-xs text-blue-600 dark:text-blue-400">
+              访问次数: {tool.count || 0}
+            </div>
           </div>
         </div>
         

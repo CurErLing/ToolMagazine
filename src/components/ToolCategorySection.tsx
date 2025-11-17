@@ -17,10 +17,26 @@ const ToolCategorySection: React.FC<ToolCategorySectionProps> = ({
   onSubcategoryChange,
   onToolClick
 }) => {
+  // 计算分类下的网站总数
+  const calculateTotalTools = () => {
+    if (category.subcategories) {
+      return Object.values(category.subcategories).reduce((total, subcategory) => {
+        return total + (subcategory.tools?.length || 0);
+      }, 0);
+    } else {
+      return category.tools?.length || 0;
+    }
+  };
+
+  const totalTools = calculateTotalTools();
+
   return (
     <section className="mb-16 scroll-mt-20" id={categoryKey} aria-labelledby={`${categoryKey}-heading`}>
       <h2 id={`${categoryKey}-heading`} className="text-2xl font-bold text-gray-900 dark:text-white mb-6 relative inline-block">
         {category.title}
+        <span className="ml-3 text-sm font-normal text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full">
+          {totalTools} 个网站
+        </span>
         <span className="absolute bottom-0 left-0 w-full h-1 bg-blue-600 dark:bg-blue-400 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
       </h2>
       
