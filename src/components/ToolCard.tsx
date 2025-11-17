@@ -36,14 +36,17 @@ interface ToolCardProps {
 const ToolCard: React.FC<ToolCardProps> = ({ tool, onClick }) => {
   // 渲染图标的函数
   const renderIcon = () => {
-    if (!tool.icon) {
-      return <div className="h-5 w-5 bg-blue-600 rounded-full" aria-hidden="true" />;
-    }
-    
     try {
       // 添加调试信息
       console.log(`Tool: ${tool.name}, Icon type: ${typeof tool.icon}, Icon:`, tool.icon);
       
+      // 优先使用tool.icon组件（如果存在且是有效的组件）
+      if (tool.icon && typeof tool.icon === 'function') {
+        const IconComponent = tool.icon;
+        return <IconComponent className="h-5 w-5 text-blue-600 dark:text-blue-400 transition-colors duration-200 group-hover:text-blue-700 dark:group-hover:text-blue-300" aria-hidden="true" />;
+      }
+      
+      // 以下是基于名称匹配的回退逻辑（仅当tool.icon不存在或无效时使用）
       // AI助手类工具
       if (tool.name.includes('ChatGPT') || tool.name.includes('Gemini') || tool.name.includes('豆包AI') || 
           tool.name.includes('讯飞星火') || tool.name.includes('DeepSeek') || tool.name.includes('智谱清言') || 
