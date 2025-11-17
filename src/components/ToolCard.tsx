@@ -46,6 +46,33 @@ const ToolCard: React.FC<ToolCardProps> = ({ tool, onClick }) => {
         return <IconComponent className="h-5 w-5 text-blue-600 dark:text-blue-400 transition-colors duration-200 group-hover:text-blue-700 dark:group-hover:text-blue-300" aria-hidden="true" />;
       }
       
+      // 学习类工具（优先处理）
+      if (tool.name.includes('英语真题在线') || tool.name.includes('LingoHut') || tool.name.includes('英语学习助手') || 
+          tool.name.includes('英语发音矫正器') || tool.name.includes('Youzack 精听') || tool.name.includes('英语阅读网') || 
+          tool.name.includes('Loecsen') || tool.name.includes('词频背单词') || tool.name.includes('Visuwords') || 
+          tool.name.includes('爱发音') || tool.name.includes('Toucan') || tool.name.includes('腾讯交互翻译') || 
+          tool.name.includes('CNKI 翻译助手') || tool.name.includes('アニメ・まんがの日本語') || tool.name.includes('识典古籍') || 
+          tool.name.includes('中国哲学书电子化计划') || tool.name.includes('古登堡计划') || tool.name.includes('可汗学院') || 
+          tool.name.includes('编程自学之路') || tool.name.includes('菜鸟教程') || tool.name.includes('oeasy') || 
+          tool.name.includes('吴师兄学算法') || tool.name.includes('doyoudo') || tool.name.includes('edX') || 
+          tool.name.includes('学堂在线') || tool.name.includes('默沙东诊疗手册') || tool.name.includes('丁香园用药助手') || 
+          tool.name.includes('知识图谱') || tool.name.includes('Crash Course') || tool.name.includes('国家哲学社会科学数据库') || 
+          tool.name.includes('运营笔记导航') || tool.name.includes('知识船舱') || tool.name.includes('ExamCoo') || 
+          tool.name.includes('永久免费考试系统')) {
+        // 根据工具类型选择合适的图标
+        if (tool.name.includes('编程') || tool.name.includes('算法') || tool.name.includes('代码')) {
+          return <Code className="h-5 w-5 text-blue-600 dark:text-blue-400 transition-colors duration-200 group-hover:text-blue-700 dark:group-hover:text-blue-300" aria-hidden="true" />;
+        } else if (tool.name.includes('全球') || tool.name.includes('外语') || tool.name.includes('翻译') || tool.name.includes('国际')) {
+          return <Globe className="h-5 w-5 text-blue-600 dark:text-blue-400 transition-colors duration-200 group-hover:text-blue-700 dark:group-hover:text-blue-300" aria-hidden="true" />;
+        } else if (tool.name.includes('数据库') || tool.name.includes('知识图谱')) {
+          return <Database className="h-5 w-5 text-blue-600 dark:text-blue-400 transition-colors duration-200 group-hover:text-blue-700 dark:group-hover:text-blue-300" aria-hidden="true" />;
+        } else if (tool.name.includes('打字')) {
+          return <Keyboard className="h-5 w-5 text-blue-600 dark:text-blue-400 transition-colors duration-200 group-hover:text-blue-700 dark:group-hover:text-blue-300" aria-hidden="true" />;
+        } else {
+          return <Book className="h-5 w-5 text-blue-600 dark:text-blue-400 transition-colors duration-200 group-hover:text-blue-700 dark:group-hover:text-blue-300" aria-hidden="true" />;
+        }
+      }
+      
       // 以下是基于名称匹配的回退逻辑（仅当tool.icon不存在或无效时使用）
       // AI助手类工具
       if (tool.name.includes('ChatGPT') || tool.name.includes('Gemini') || tool.name.includes('豆包AI') || 
