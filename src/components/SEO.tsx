@@ -53,8 +53,9 @@ const SEO: React.FC<SEOProps> = ({
         { name: 'theme-color', content: '#2563eb' },
         { name: 'apple-mobile-web-app-capable', content: 'yes' },
         { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },
-        { name: 'apple-mobile-web-app-title', content: siteName },
-        
+        { name: 'apple-mobile-web-app-title', content: siteName }
+      ]}
+      link={[
         // 图标
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
         { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
@@ -64,7 +65,7 @@ const SEO: React.FC<SEOProps> = ({
         // Manifest
         { rel: 'manifest', href: '/manifest.json' },
         
-        // Cananical URL
+        // Canonical URL
         { rel: 'canonical', href: url }
       ]}
       script={[

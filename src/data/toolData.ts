@@ -378,8 +378,8 @@ export const initialToolCategories: Record<string, ToolCategoryWithSub> = {
             title: '娱乐互动',
             tools: [
       //娱乐互动
-      { name: '红警网页版', desc: '红警在线游玩', icon: Gamepad2, url: 'https://game.chronodivide.com', count: 0 },
-      { name: '植物大战僵尸', desc: '网页版植物大战僵尸', icon: Gamepad2, url: 'https://pvz.heheda.top', count: 0 },
+              { name: '红警网页版', desc: '红警在线游玩', icon: Gamepad2, url: 'https://game.chronodivide.com', count: 0 },
+              { name: '植物大战僵尸', desc: '网页版植物大战僵尸', icon: Gamepad2, url: 'https://pvz.heheda.top', count: 0 },
               { name: '小霸王', desc: '在线怀旧街机', icon: Gamepad2, url: 'https://www.yikm.net', count: 0 },
               { name: '美少女生成器', desc: '随机动漫少女', icon: Image, url: 'https://thiswaifudoesnotexist.net', count: 0 },
               { name: '动漫捏脸', desc: '动漫角色捏脸', icon: Image, url: 'https://picrew.me/ja', count: 0 },
@@ -450,7 +450,7 @@ export const initialToolCategories: Record<string, ToolCategoryWithSub> = {
       { name: '8values测试', desc: '政治倾向测试', icon: Building2, url: 'https://songyon.github.io/8valuescn/', count: 0 },
       { name: '网页时光机', desc: '十年前网页回顾', icon: Building2, url: 'https://neal.fun/ten-years-ago/', count: 0 },
 
-          { name: '古典音乐库', desc: '古典MIDI下载', icon: Building2, url: 'https://www.kunstderfuge.com/', count: 0 },
+      { name: '古典音乐库', desc: '古典MIDI下载', icon: Building2, url: 'https://www.kunstderfuge.com/', count: 0 },
       { name: '英特尔博物馆', desc: '英特尔虚拟博物馆', icon: Building2, url: 'https://virtualmuseum.intel.com/', count: 0 },
       { name: '铅笔图鉴', desc: '铅笔品牌图鉴', icon: Building2, url: 'https://brandnamepencils.com/', count: 0 },
       { name: '物流艺术', desc: '快递路径可视化', icon: Building2, url: 'https://logisticsartproject.com/', count: 0 },
@@ -458,10 +458,10 @@ export const initialToolCategories: Record<string, ToolCategoryWithSub> = {
       { name: '行星年龄计算', desc: '行星年龄换算', icon: Building2, url: 'https://exploratorium.edu/ronh/age/', count: 0 },
       { name: '公共领域音乐', desc: '公共领域音乐库', icon: Building2, url: 'https://www.locserendipity.com/PushPlay.html', count: 0 },
       { name: '人口时钟', desc: '全球人口动态', icon: Building2, url: 'https://countrymeters.info/cn/', count: 0 },
- { name: '17Track 全球物流', desc: '国际物流查询', icon: Truck, url: 'https://www.17track.net/zh-cn', count: 0 },
+      { name: '17Track 全球物流', desc: '国际物流查询', icon: Truck, url: 'https://www.17track.net/zh-cn', count: 0 },
    
       { name: '手机博物馆', desc: '手机发展史图鉴', icon: Database, url: 'https://www.mobilephonemuseum.com/catalogue', count: 0 },
-     { name: '汤姆科技指南', desc: '硬件测评指南', icon: Database, url: 'https://TomsGuide.com', count: 0 },
+      { name: '汤姆科技指南', desc: '硬件测评指南', icon: Database, url: 'https://TomsGuide.com', count: 0 },
       { name: 'anyknew 热点', desc: '热点资讯聚合', icon: Building2, url: 'https://www.anyknew.com/#/', count: 0 },
       { name: 'BibiGPT', desc: '音视频AI总结', icon: Brain, url: 'https://bibigpt.co', count: 0 },
       { name: '薪情', desc: '全球薪资查询', icon: Database, url: 'https://www.51salary.com', count: 0 },  
