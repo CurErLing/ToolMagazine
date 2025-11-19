@@ -1,5 +1,4 @@
 import { useState, useEffect, useCallback } from 'react';
-import { initialToolCategories } from '../data/toolData';
 
 export interface ToolCounter {
   [toolName: string]: number;

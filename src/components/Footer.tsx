@@ -134,7 +134,7 @@ const Footer: React.FC = () => {
         <div className="mt-12 pt-8 border-t border-gray-800">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 mb-4 md:mb-0">
-              © 2024 凌同学工具库. All rights reserved.
+              © 2025 凌同学工具库. All rights reserved.
             </p>
             <button
               onClick={scrollToTop}
